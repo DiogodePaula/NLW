@@ -1,0 +1,5 @@
+npm init -y  = inicia o projeto criando o package.json
+npm i express = micro-framework, conjunto de código que facilitam, a escrita de código no back-end, como rotas por exemplo
+package-lock.json = é para o npm ter uma referencia mais rápida pras dependências das dependências e instalar dependências em comum uma única vez
+npx = executa uma biblioteca que tenha instalado no projeto, esses executáveis estão na pasta node_modules>bin
+ts-node-dev = 

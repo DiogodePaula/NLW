@@ -1,0 +1,2 @@
+npm install -g expo-cli = instalar o expo globalmente na máquina
+expo --version
