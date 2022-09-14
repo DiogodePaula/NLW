@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box faz que se tiver uam div com 500px e adicionar padding de 10px ele se mantenha com 500px,
+    o padrão seria os valores se somarem, 510px o que faria ser maior */
+}
+ul {
+    list-style: none;
+}
+body {
+    background-image: url(./assets/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+main * {
+    /* adiciona uma borda a todos os elementos do main */
+    /* border: 1px solid red; */
+}
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: auto;
+    
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+header div {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    padding: 5px;
+    line-height: 0;
+}
+header img {
+    width: 120px;
+    border-radius: 50%;
+}
+section {
+    color: white;    
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+section div {
+    background-color: #2a2634;
+    padding: 24px 32px 32px 32px;
+    border-radius: 8px;
+}
+section h2 {    
+    letter-spacing: -0.47px;
+}
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA
+}
+section ul {
+    display: flex;    
+    flex-wrap: wrap; /* quebra de linha */ 
+    gap: 16px;
+    margin-top: 24px;
+}
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+.channel-list img {
+    border-radius: 50%;
+}
