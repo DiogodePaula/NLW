@@ -2,4 +2,11 @@ npm init -y  = inicia o projeto criando o package.json
 npm i express = micro-framework, conjunto de código que facilitam, a escrita de código no back-end, como rotas por exemplo
 package-lock.json = é para o npm ter uma referencia mais rápida pras dependências das dependências e instalar dependências em comum uma única vez
 npx = executa uma biblioteca que tenha instalado no projeto, esses executáveis estão na pasta node_modules>bin
-ts-node-dev = 
+ts-node-dev || tsnd = fica observando o código e atualizando a cada save, o que evita ficar reiniciando a aplicação toda hora.
+knex = query builder.
+prisma = orm
+npx prisma init -h = mostra possíveis comandos adicionais
+npx prisma init --datasource-provider SQLite
+npx prisma migrate dev
+npx prisma studio
+npm i @prisma/client = permite acessar o banco de dados de dentro 
