@@ -10,3 +10,4 @@ npx prisma init --datasource-provider SQLite
 npx prisma migrate dev
 npx prisma studio
 npm i @prisma/client = permite acessar o banco de dados de dentro 
+npm i cors = protege o back de fronts que eu não quero que acessem meu back-end

@@ -1,7 +1,16 @@
 import express from "express";
-import {PrismaClient} from "@prisma/client"
+import cors from 'cors';
+
+import { PrismaClient } from "@prisma/client";
+import { converte } from "./utils/convert-hours-string-to-minutes";
+import { converteMinToHours } from "./utils/convert-minutes-to-string-hours";
 
 const app = express();
+app.use(express.json());
+app.use(cors({
+    // origin: 'https://dominio-que-pode-acessar-o-back-end'
+}))
+
 const prisma = new PrismaClient(
     {log:['query']}
 ) // conexão com o banco
@@ -20,22 +29,73 @@ app.get('/games', async (req, res) => {
     return res.json(games);
 })
 
+app.post('/games/:id/ads', async (req, res) => {
+    const gameId = req.params.id;
+    const body: any = req.body;
+    // biblioteca para validação zod javascript
+    const ad = await prisma.ad.create({
+        data: {
+            gameId,
+            name: body.name,
+            yearsPlaying: body.yearsPlaying,
+            discord: body.discord,
+            weekDays: body.weekDays.join(','),
+            hourStart: converte(body.hourStart),
+            houtEnd: converte(body.houtEnd),
+            useVoiceChannel: body.useVoiceChannel,
+        }
+    })
+    
+    return res.status(201).json(ad);
+})
+
 app.get('/games/:id/ads', async (req, res) => {
     const gameId = req.params.id;
 
     const ads = await prisma.ad.findMany({
+        select: {
+            id: true,
+            name: true,
+            weekDays: true,
+            useVoiceChannel: true,
+            yearsPlaying: true,
+            hourStart: true,
+            houtEnd: true,            
+        },
         where: {
             gameId,
+        }, 
+        orderBy: {
+            createdAt: 'desc'
         }
     })
     
-    return res.status(201).json(ads);
+    return res.status(201).json(ads.map(ad => {
+        return {
+            // um literal de objeto, a sintaxe de propagação enumera as propriedades 
+            // de um objeto e adiciona os pares chave-valor ao objeto que está sendo criado.
+            ...ad, //spread operator
+            weekDays: ad.weekDays.split(','),
+            hourStart: converteMinToHours(ad.hourStart),
+            houtEnd: converteMinToHours(ad.houtEnd)
+        }
+    }));
 })
 
-app.get('/ads/:id/discord', (req, res) => {
-    // const adsId = req.params.id;
+app.get('/ads/:id/discord', async (req, res) => {
+    const adId = req.params.id;
+    const ad = await prisma.ad.findUniqueOrThrow({
+        select: {
+            discord: true,
+        },
+        where: {
+            id: adId
+        }
+    })
     
-    return res.json([])
+    return res.json({
+        discord: ad.discord
+    })
 })
 
 app.listen(3333) 
