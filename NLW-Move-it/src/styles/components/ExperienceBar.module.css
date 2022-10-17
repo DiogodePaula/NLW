@@ -1,0 +1,35 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar span {
+  font-size: 1rem;
+  color: var(--red);
+}
+
+/* pega exatamente a div que está dentro de .experienceBar 
+(um nível de filho) e não todas do componente */
+.experienceBar > div {
+  /* para ocupar a largura maxima do container */
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--gray-line);
+  margin: 0 1.5rem;
+  position: relative;
+  color: var(--red);
+}
+
+.experienceBar > div > div {
+  height: 4px;
+  border-radius: 4px;
+  background: var(--red);
+}
+
+span.currentExperience {
+  position: absolute;
+  top: 12px;
+  /* centraliza um elemento com absolute */
+  transform: translateX(-50%);
+}
