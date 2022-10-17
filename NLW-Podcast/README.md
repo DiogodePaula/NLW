@@ -1,9 +1,5 @@
 # Podcast-Next.js
 
-<img src="https://i.imgur.com/FyLheVc.png"/>
-
-<img src="https://i.imgur.com/Lu3fFjb.png"/>
-
 # Tecnologias 🤖
 
 - REACT
@@ -12,7 +8,7 @@
 
 # Projeto 💻
 
-O podcastr é um app para reprodução de episódios em áudio do seu podcast favorito.
+O podcast é um app para reprodução de episódios em áudio do seu podcast favorito.
 
 # Como executar 🚀
 
@@ -24,3 +20,7 @@ O podcastr é um app para reprodução de episódios em áudio do seu podcast fa
 # Referências
 
 Projeto desenvolvido durante o NLW5 da Rocketseat, trilha React.
+
+<img src="https://i.imgur.com/FyLheVc.png"/>
+
+<img src="https://i.imgur.com/Lu3fFjb.png"/>
