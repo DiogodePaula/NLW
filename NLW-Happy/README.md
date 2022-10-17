@@ -8,4 +8,4 @@
 
 <img src="https://i.imgur.com/Y9Nj0pg.png"/>
 
-<img src="https://i.imgur.com/UAJCdHU.png"/>
+<img src="https://i.imgur.com/UAJCdHU.png" height="200"/>
