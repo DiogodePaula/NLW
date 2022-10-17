@@ -1,0 +1,19 @@
+{
+  "name": "NLW2-Rocketseat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DiogodePaula/NLW2-Rocketseat.git",
+  "author": "DiogodePaula <depaulatrabalhos@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2",
+    "sqlite-async": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
