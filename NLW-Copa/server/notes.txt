@@ -1,0 +1,14 @@
+npm init -y
+npm i typescript -D
+npx tsc --init = config typescript
+npm i fastify
+npm i tsx -D = automatiza o processo de compila o código e executa
+npm i prisma -D = ORM para trabalhar com banco de dados 
+npm i @prisma/client
+npx prisma init --datasource-provider SQLite
+    * --datasource-provider SQLite = essa flag determina o banco SQLite, se não for especifica isso por padrão viria o PostgreSQL
+npx prisma migrate dev
+npx prisma studio = visualizar o banco de dados pelo navegador
+npm i prisma-erd-generator @mermaid-js/mermaid-cli -D = diagrama ERD
+npx prisma generate
+npm i @fastify/cors
