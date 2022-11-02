@@ -1,0 +1,1 @@
+npx create-next-app@latest --use-npm = criar projeto next e uma flag para caso vc tenha outros gerenciadores de pacotes
