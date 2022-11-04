@@ -12,3 +12,6 @@ npx prisma studio = visualizar o banco de dados pelo navegador
 npm i prisma-erd-generator @mermaid-js/mermaid-cli -D = diagrama ERD
 npx prisma generate
 npm i @fastify/cors
+npx prisma db seed = gerar dados fakes
+npm i zod = validações
+npm i short-unique-id

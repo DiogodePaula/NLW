@@ -19,4 +19,55 @@ model Pool {
   title     String
   code      String   @unique // dado unico dentro do banco de dados
   createdAt DateTime @default(now())
+  ownerId   String?
+
+  participants Participant[]
+  owner        User?         @relation(fields: [ownerId], references: [id])
 }
+
+model Participant {
+  id     String @id @default(cuid())
+  userId String
+  poolId String
+
+  guesses Guess[]
+  user    User    @relation(fields: [userId], references: [id])
+  pool    Pool    @relation(fields: [poolId], references: [id])
+
+  @@unique([userId, poolId])
+}
+
+model User {
+  id              String        @id @default(cuid())
+  name            String
+  email           String        @unique
+  avatarUrl       String? // campo pode estar nulo
+  createdAt       DateTime      @default(now())
+  participatingAt Participant[]
+  ownPools        Pool[]
+}
+
+model Game {
+  id                    String   @id @default(cuid())
+  date                  DateTime
+  firstTeamCountryCode  String
+  secondTeamCountryCode String
+  // colunas no banco sempre são as que informan o tipo do campo
+  guesses               Guess[]
+}
+
+model Guess {
+  id               String      @id @default(cuid())
+  firstTeamPoints  Int
+  secondTeamPoints Int
+  createdAt        DateTime    @default(now())
+  gameId           String
+  participantId    String
+  // a linha 52 é a forma que o prisma identifica a relação entre as tabelas 
+  // ela não será uma coluna na tabela
+  game             Game        @relation(fields: [gameId], references: [id])
+  participant      Participant @relation(fields: [participantId], references: [id])
+}
+
+// dicas 
+// salvar valores monetariois em centavos e horas em minutos facilita o trabalho  
