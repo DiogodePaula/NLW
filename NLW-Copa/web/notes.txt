@@ -1,1 +1,4 @@
 npx create-next-app@latest --use-npm = criar projeto next e uma flag para caso vc tenha outros gerenciadores de pacotes
+npm i -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p = arquivo de configuração
+npm i axios = fazer chamadas http para o back-end
