@@ -1,0 +1,5 @@
+npx create-expo-app my-app
+npx expo start
+npm i native-base --force
+npm install native-base react-native-svg@12.1.1 react-native-safe-area-context@3.3.2 
+npm i react-native-svg-transformer = adicionar arquivo de configuração metro.config.js
