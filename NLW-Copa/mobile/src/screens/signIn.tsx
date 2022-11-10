@@ -10,7 +10,7 @@ export function SignIn(){
       <Center flex={1} bgColor="gray.900">
         <Logo width={212} height={40} />
         <Button 
-          title="ENTRAR COM O GOOGLE teste" 
+          title="ENTRAR COM O GOOGLE" 
           leftIcon={<Icon as={Fontisto} name="google" color="white" size="md" />} 
           type="SECONDARY" 
           // isLoading={true}
