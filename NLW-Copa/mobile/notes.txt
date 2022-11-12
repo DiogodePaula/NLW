@@ -3,3 +3,14 @@ npx expo start
 npm i native-base --force
 npm install native-base react-native-svg@12.1.1 react-native-safe-area-context@3.3.2 
 npm i react-native-svg-transformer = adicionar arquivo de configuração metro.config.js
+npx expo install expo-auth-session expo-random
+    expo-auth-session = lidar com a parte de autenticação.
+    expo-random = Prova de troca de código de chave, garante que apenas o aplicativo que 
+    acionou o fluxo de autorização inicial é capaz de trocar com exito o código de verificação por um JWT.
+npx expo install expo-web-browser = cuida do processo de abrir o browser e voltar para a aplicação.
+npm i phosphor-react-native = biblioteca de ícones 
+
+
+** dicas do redirecionamento ** 
+dentro do app.json vamos configurar o scheme para o token gerado pelo google saber qual aplicação ele deve 
+voltar
