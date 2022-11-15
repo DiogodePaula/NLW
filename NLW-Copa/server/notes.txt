@@ -7,7 +7,7 @@ npm i prisma -D = ORM para trabalhar com banco de dados
 npm i @prisma/client
 npx prisma init --datasource-provider SQLite
     * --datasource-provider SQLite = essa flag determina o banco SQLite, se não for especifica isso por padrão viria o PostgreSQL
-npx prisma migrate dev
+npx prisma migrate dev = gera e atualiza mudanças no banco
 npx prisma studio = visualizar o banco de dados pelo navegador
 npm i prisma-erd-generator @mermaid-js/mermaid-cli -D = diagrama ERD
 npx prisma generate
@@ -15,3 +15,4 @@ npm i @fastify/cors
 npx prisma db seed = gerar dados fakes
 npm i zod = validações
 npm i short-unique-id
+npm i @fastify/jwt 

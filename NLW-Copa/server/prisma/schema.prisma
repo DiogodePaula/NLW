@@ -41,6 +41,7 @@ model User {
   id              String        @id @default(cuid())
   name            String
   email           String        @unique
+  googleId        String?       @unique
   avatarUrl       String? // campo pode estar nulo
   createdAt       DateTime      @default(now())
   participatingAt Participant[]
@@ -67,6 +68,8 @@ model Guess {
   // ela não será uma coluna na tabela
   game             Game        @relation(fields: [gameId], references: [id])
   participant      Participant @relation(fields: [participantId], references: [id])
+
+  @@unique([participantId, gameId])
 }
 
 // dicas 

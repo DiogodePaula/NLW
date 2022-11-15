@@ -122,5 +122,5 @@ export const getServerSideProps = async () => {
         }
     }
 }
-// configurar o TW para SSR
+// configurar o TW para SSR 
 // getStaticProps documentação do NEXT  
