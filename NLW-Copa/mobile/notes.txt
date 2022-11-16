@@ -9,6 +9,12 @@ npx expo install expo-auth-session expo-random
     acionou o fluxo de autorização inicial é capaz de trocar com exito o código de verificação por um JWT.
 npx expo install expo-web-browser = cuida do processo de abrir o browser e voltar para a aplicação.
 npm i phosphor-react-native = biblioteca de ícones 
+npm i @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/bottom-tabs
+npm i axios 
+npm uninstall axios = remover uma biblioteca  
+
 
 
 ** dicas do redirecionamento ** 

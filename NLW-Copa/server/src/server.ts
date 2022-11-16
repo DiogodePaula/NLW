@@ -28,7 +28,10 @@ async function bootstrap() {
     await fastify.register(poolRoutes)
     await fastify.register(userRoutes)
 
-    await fastify.listen({ port: 3333, /*host: '0.0.0.0'*/ });
+    await fastify.listen({ port: 3333, host: '0.0.0.0' });
 }
 
 bootstrap();
+
+// host: '0.0.0.0' deve ser adicionado em ambiente de desenvolvimento devido ao 
+// espelhamento interno quer o android faz 

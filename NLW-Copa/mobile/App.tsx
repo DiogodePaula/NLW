@@ -7,8 +7,7 @@ import { AuthContextProvider } from './src/contexts/AuthContext';
 import { THEME } from './src/styles/theme';
 
 import { Loading } from './src/components/Loading';
-import { Pools } from './src/screens/Pools';
-import { SignIn } from './src/screens/SignIn';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_500Medium, Roboto_700Bold });
@@ -17,17 +16,8 @@ export default function App() {
     <NativeBaseProvider theme={THEME}>
       <AuthContextProvider>
         <StatusBar barStyle='light-content' backgroundColor="transparent" translucent />
-        { fontsLoaded ?  <SignIn /> : <Loading /> }      
+        { fontsLoaded ?  <Routes /> : <Loading /> }      
       </AuthContextProvider>
     </NativeBaseProvider>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
