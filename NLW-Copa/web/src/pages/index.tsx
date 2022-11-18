@@ -44,7 +44,7 @@ export default function Home(props: HomeProps) {
             <main>
                 <Image src={logo} alt="NLW Copa" />
                 <h1 className="mt-14 text-white text-5xl font-bold leading-tight">
-                    Crie seu próprio botão da copa e compartilhe entre amigos!
+                    Crie seu próprio bolão da copa e compartilhe entre amigos!
                 </h1>
                 {/* no TW tudo é multiplicado por 4 mt-10 == margin-top:40px */}
                 <div className="mt-10 flex items-center gap-2">
