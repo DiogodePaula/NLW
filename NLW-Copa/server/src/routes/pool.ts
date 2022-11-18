@@ -86,13 +86,13 @@ export async function poolRoutes(fastify: FastifyInstance){
 
         if(!pool){
             return reply.status(400).send({
-                message: 'Pool not found'
+                message: 'Pool not found.'
             })
         }
 
         if(pool.participants.length > 0){
             return reply.status(400).send({
-                message: 'You already joined this pool'
+                message: 'You already joined this pool.'
             })
         }
 
@@ -158,7 +158,7 @@ export async function poolRoutes(fastify: FastifyInstance){
         return { pools }
     })
 
-    fastify.get('/pools/:id', { onRequest: [ authenticate ] }, async (req) =>{
+    fastify.get('/pools/:id', { onRequest: [ authenticate ] }, async (req, reply) =>{
         const getPoolParams = z.object({
             id: z.string(),
         })
@@ -195,6 +195,59 @@ export async function poolRoutes(fastify: FastifyInstance){
                 }
             }
         })
+
+        return { pool }
+    })
+
+    fastify.get('/poolss/:poolId', { onRequest: [ authenticate ] }, async (req, reply) =>{
+        const getPoolParams = z.object({
+            poolId: z.string(),
+        })
+
+        const { poolId } = getPoolParams.parse(req.params)
+
+        const pool = await prisma.pool.findFirst({
+            include: {
+                // traz total de participantes do bolão
+                _count: {
+                    select: {
+                        participants: true
+                    }
+                },
+                participants: {
+                    select: {
+                        id: true,
+                        user: {
+                            select: {
+                                avatarUrl: true,
+                            }
+                        }
+                    },
+                    take: 4,
+                },
+                owner: {
+                    select: {
+                        id: true,
+                        name: true,
+                    }
+                }
+            },
+            where: {
+                id: poolId,
+                participants: {
+                    some: {
+                        userId: req.user.sub,
+                    }
+                }
+            },
+            
+        });
+
+        if(!pool){
+            return reply.status(400).send({
+                message: "Pool not found"
+            })
+        }
 
         return { pool }
     })

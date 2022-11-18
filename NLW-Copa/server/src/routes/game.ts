@@ -4,7 +4,7 @@ import { z } from "zod"
 import { authenticate } from "../plugins/authenticate"
 
 export async function gameRoutes(fastify: FastifyInstance){
-    fastify.get('/pools/:id/', { onRequest: [ authenticate ] }, async (req) => {
+    fastify.get('/pools/:id/games', { onRequest: [ authenticate ] }, async (req) => {
         const getPoolParams = z.object({
             id: z.string()
         })

@@ -29,11 +29,10 @@ export function AuthContextProvider({ children }: AuthProviderProps){
 
     // promptAsync permite que se inicie o fluxo de autenticação
     const [ req, res, promptAsync ] = Google.useAuthRequest({
-        clientId: '807639756725-68ohb7slafsj1filrmomimqot6knkr76.apps.googleusercontent.com',
+        clientId: process.env.CLIENT_ID,
         redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
         scopes: ['profile', 'email']
     })
-
     
     async function signIn() {
         try {

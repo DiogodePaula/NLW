@@ -1,8 +1,5 @@
-
 export declare global {
-
-    namespace ReacTNavigation {
-        
+    namespace ReacTNavigation {        
         interface RootParamList {
             new: undefined;
             pools: undefined;

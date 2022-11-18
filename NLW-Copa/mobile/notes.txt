@@ -14,9 +14,14 @@ npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/bottom-tabs
 npm i axios 
 npm uninstall axios = remover uma biblioteca  
-
+npm i country-list
+npm i react-native-country-flag
+npm i dayjs = formatação de datas
+npm i dotenv babel-plugin-inline-dotenv = lidar com variáveis de ambiente e conseguir usar no react-native
 
 
 ** dicas do redirecionamento ** 
-dentro do app.json vamos configurar o scheme para o token gerado pelo google saber qual aplicação ele deve 
+- Dentro do app.json vamos configurar o scheme para o token gerado pelo google saber qual aplicação ele deve 
 voltar
+
+- Adicionar no arquivo babel.config.js o plugins: ['inline-dotenv']
