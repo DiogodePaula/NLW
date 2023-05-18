@@ -1,0 +1,17 @@
+npm init -y 
+npm i typescript -D
+npm i tsx -D = converte o typescript em javascript
+npm i @types/node -D = typescript entender que está dentro de um projeto node
+npx tsc --init = executa binários que são instalados pelas bibliotecas dos projetos
+npm i fastify = framework de conexão com banco de dados
+npm i eslint -D = padronizar projeto
+npm i @rocketseat/eslint-config -D
+"scripts": {
+    "lint": "eslint src --ext .ts --fix" = vai formatar todos os arquivos .ts da pasta src
+}
+npm i prisma -D
+npx prisma -h = abrir o help
+npx prisma init --datasource-provider SQLite = diz para prisma que queremos um banco sqlite ao seu padrão postgres sql
+npx prisma migrate dev = criar as tabelas de acordo com as models 
+npx prisma studio = visualização no navegador das tabelas 
+npm i @prisma/client = acessar o banco dentro da api
