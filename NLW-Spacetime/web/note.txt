@@ -1,0 +1,12 @@
+npx create-next-app@latest web --use-npm = criar projeto next 'YES' para todas as opções
+
+para o html se autocompletar no JS
+"emmet.syntaxProfiles": {
+    "javascript": "jsx"
+}
+"emmet.includeLanguages": {
+    "javascript": "javascriptreact" 
+}
+
+npm i @rocketseat/eslint-config -D
+npm i prettier-plugin-tailwindcss -D

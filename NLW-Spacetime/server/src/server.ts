@@ -13,5 +13,6 @@ app.get("/users", async () => {
 app.listen({
 	port: 3333,
 }).then(() => {
+	// Emoji windows + .
 	console.log("running 😁 http://localhost:3333");
 });
