@@ -1,0 +1,6 @@
+npx create-expo-app mobile = usar o expo localmente ao invés de globalmente
+npm i nativewind
+npm i tailwindcss -D
+npx tailwindcss init
+npm i eslint @rocketseat/eslint-config -D
+npm i prettier-plugin-tailwindcss -D
