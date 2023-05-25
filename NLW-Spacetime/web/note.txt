@@ -10,3 +10,4 @@ para o html se autocompletar no JS
 
 npm i @rocketseat/eslint-config -D
 npm i prettier-plugin-tailwindcss -D
+npm i lucide-react = ícones
