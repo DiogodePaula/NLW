@@ -12,6 +12,9 @@ npm i @rocketseat/eslint-config -D
 npm i prisma -D
 npx prisma -h = abrir o help
 npx prisma init --datasource-provider SQLite = diz para prisma que queremos um banco sqlite ao seu padrão postgres sql
-npx prisma migrate dev = criar as tabelas de acordo com as models 
+npx prisma migrate dev = criar as tabelas de acordo com as models e atualiza caso haja alterações
 npx prisma studio = visualização no navegador das tabelas 
 npm i @prisma/client = acessar o banco dentro da api
+npx prisma migrate reset
+npm i zod = para fazer a validação dos dados
+npm i @fastify/cors = definir quais urls de front nosso back vai poder ser acessado
