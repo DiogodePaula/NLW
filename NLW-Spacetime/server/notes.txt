@@ -18,3 +18,6 @@ npm i @prisma/client = acessar o banco dentro da api
 npx prisma migrate reset
 npm i zod = para fazer a validação dos dados
 npm i @fastify/cors = definir quais urls de front nosso back vai poder ser acessado
+npm i dotenv -D = acessar variáveis de ambiente 
+npm i axios = fazer requisições http 
+npm i @fastify/jwt 
