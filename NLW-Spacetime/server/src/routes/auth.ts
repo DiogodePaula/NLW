@@ -13,9 +13,9 @@ export async function authRoutes(app: FastifyInstance) {
 
 		const accessTokenResponse = await axios.post("https://github.com/login/oauth/access_token", null, {
 			params: {
-				code,
 				client_id: process.env.GITHUB_CLIENT_ID,
 				client_secret: process.env.GITHUB_CLIENT_SECRET,
+				code,
 			},
 			headers: {
 				Accept: "application/json",
@@ -67,6 +67,6 @@ export async function authRoutes(app: FastifyInstance) {
 			}
 		);
 
-		return token;
+		return { token };
 	});
 }

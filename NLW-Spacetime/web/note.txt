@@ -11,3 +11,5 @@ para o html se autocompletar no JS
 npm i @rocketseat/eslint-config -D
 npm i prettier-plugin-tailwindcss -D
 npm i lucide-react = ícones
+npm i axios
+npm i jwt-decode = intender o token e retirar as informações de dentro dele 
