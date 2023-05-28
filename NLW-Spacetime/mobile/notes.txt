@@ -7,3 +7,8 @@ npm i prettier-plugin-tailwindcss -D
 npx expo install @expo-google-fonts/roboto @expo-google-fonts/bai-jamjuree expo-font
 npx expo install react-native-svg = para poder import uma imagem svg e usar no react native
 npm i -D react-native-svg-transformer
+npx expo install expo-auth-session expo-crypto
+npx expo start --clear = limpar o cache do expo 
+npm i axios 
+npx expo install expo-secure-store = biblioteca para guardar informações mais sensíveis como um token
+npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar react-native-gesture-handler = expo router

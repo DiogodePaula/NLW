@@ -18,6 +18,7 @@ app.register(memoriesRoutes);
 
 app.listen({
 	port: 3333,
+	host: "0.0.0.0", // para funcionar no mobile
 }).then(() => {
 	// Emoji windows + .
 	console.log("running 😁 http://localhost:3333");
