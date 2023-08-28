@@ -27,5 +27,7 @@ model Memory {
   isPublic  Boolean  @default(false)
   createdAt DateTime @default(now())
 
+  // com a configuração do json.settings do prisma ao estabelecer essa relação 
+  // user User ao salvar ele automaticamente monta a realção entre as tabelas
   user User @relation(fields: [userId], references: [id])
 }

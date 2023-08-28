@@ -14,7 +14,7 @@ app.register(cors, {
 });
 app.register(jwt, { secret: "spacetime" });
 app.register(authRoutes);
-app.register(memoriesRoutes);
+app.register(memoriesRoutes); // registra um arquivo de rotas separado
 
 app.listen({
 	port: 3333,
