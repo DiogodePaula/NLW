@@ -18,7 +18,7 @@ export async function authRoutes(app: FastifyInstance) {
 				code,
 			},
 			headers: {
-				Accept: "application/json",
+				Accept: "application/json", // formato que o github deve me devolver a resposta da requisição
 			},
 		});
 

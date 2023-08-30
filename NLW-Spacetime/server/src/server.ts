@@ -12,7 +12,7 @@ app.register(cors, {
 	origin: true, // todas URLs de front-end poderão acessar nosso back-end
 	// origin: ["http://localhost:3000", "https://APLICAÇÃO-PRODUÇÃO.com/memories"], uso em produção listar urls que poderão ter acesso
 });
-app.register(jwt, { secret: "spacetime" });
+app.register(jwt, { secret: "spacetime" }); //o secret diferencia esse jwt de outros jwt
 app.register(authRoutes);
 app.register(memoriesRoutes); // registra um arquivo de rotas separado
 
