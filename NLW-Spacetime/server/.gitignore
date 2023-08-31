@@ -1,2 +1,9 @@
 # Dependency directories
 node_modules/
+
+# local env files
+# git rm .env --cached 
+*.env
+*.env.example
+*.env.local
+*.env.staging

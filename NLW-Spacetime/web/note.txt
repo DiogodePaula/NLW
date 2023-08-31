@@ -13,3 +13,4 @@ npm i prettier-plugin-tailwindcss -D
 npm i lucide-react = ícones
 npm i axios
 npm i jwt-decode = intender o token e retirar as informações de dentro dele 
+npm i -D @tailwindcss/forms = substituiu os elementos padrões do html para ser mais de estilizar como o checked box
