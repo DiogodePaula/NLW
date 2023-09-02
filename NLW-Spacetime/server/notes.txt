@@ -21,3 +21,5 @@ npm i @fastify/cors = definir quais urls de front nosso back vai poder ser acess
 npm i dotenv -D = acessar variáveis de ambiente 
 npm i axios = fazer requisições http 
 npm i @fastify/jwt 
+npm i @fastify/multipart = forma de envio de informações do front para o back, permitindo qualquer tipo de dado (nesse caso imagens) 
+npm i @fastify/static
