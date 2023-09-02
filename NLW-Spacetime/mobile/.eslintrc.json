@@ -1,6 +1,14 @@
 {
   "extends": ["next/core-web-vitals", "@rocketseat/eslint-config/react"],
   "rules": {
-    "camelcase": "off"
+    "camelcase": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 150, // exemplo de limite de 80 caracteres para o código
+        "comments": 120, // exemplo de limite de 120 caracteres para comentários
+        "ignoreUrls": true // ignorar URLs ao calcular o comprimento da linha
+      }
+    ]
   }
 }
