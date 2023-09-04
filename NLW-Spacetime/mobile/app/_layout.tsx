@@ -42,6 +42,7 @@ export default function Layout() {
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: "transparent" },
+          // animation: "fade",
         }}
       >
         {/* redirect vai redirecionar para proxima rota caso isUserAuthenticated seja true */}

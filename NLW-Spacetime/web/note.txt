@@ -14,3 +14,11 @@ npm i lucide-react = ícones
 npm i axios
 npm i jwt-decode = intender o token e retirar as informações de dentro dele 
 npm i -D @tailwindcss/forms = substituiu os elementos padrões do html para ser mais de estilizar como o checked box
+npm i js-cookie = pegar cookies do browser
+npm i dayjs = datas 
+
+Próximos passos:
+edição de memoria
+link para compartilhar memoria
+selecionar data da memoria
+layout responsivo
