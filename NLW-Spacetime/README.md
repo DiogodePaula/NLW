@@ -10,15 +10,15 @@
 
 # Mobile
 
--   React-Native
--   Expo
+-   REACT-NATIVE
+-   EXPO
 
 # Server
 
--   NodeJS
--   Fastify
--   Prisma
--   SQLite
+-   NODEJS
+-   FASTIFY
+-   PRISMA
+-   SQLITE
 
 # Projeto 💻
 
@@ -41,4 +41,4 @@ Projeto desenvolvido durante o NLW da Rocketseat, trilha React.
 
 <img src="https://i.imgur.com/gpPVC4L.png"/>
 
-<img src="https://i.imgur.com/8TfIubC.png"/>
+<img src="https://i.imgur.com/8TfIubC.png" height="500" />
