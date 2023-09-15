@@ -20,7 +20,7 @@ POST http://localhost:3333/videos/1fe64058-2827-4f4c-94d2-c59b218ead32/transcrip
 Content-Type: application/json
 
 {
-    "prompt": "dubstep, music eletronic"
+    "prompt": "typescript"
 }
 ###
 # @name create-transcription
@@ -30,5 +30,5 @@ Content-Type: application/json
 {
     "videoId": "1fe64058-2827-4f4c-94d2-c59b218ead32",
     "temperature": 0.5,
-    "template": "Gere um resumo sucinto da transcricao do video informada a seguir: '''{transcription}'''"
+    "prompt": "Gere um resumo sucinto da transcricao do video informada a seguir: '''{transcription}'''"
 }

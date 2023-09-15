@@ -9,3 +9,5 @@ pnpm i zod
 pnpm i openai
 pnpm i dotenv -D
 pnpm i @fastify/cors
+pnpm i ai
+pnpm prisma db seed = gerar registros na tabela prompt
