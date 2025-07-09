@@ -4,3 +4,4 @@ npx shadcn@latest init
 npx shadcn@latest add button
 npm i react-router-dom
 npm i @tanstack/react-query
+npm i @hookform/resolvers = integração do react hook form com zod ou outras bibliotecas
