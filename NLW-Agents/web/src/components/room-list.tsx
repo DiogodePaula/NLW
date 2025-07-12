@@ -21,8 +21,9 @@ export function RoomList() {
 							<Loader2 className="size-10 animate-spin" />
 						</div>
 					) : (
+						data &&
 						data?.map((room) => (
-							<Link key={room.id} to={`/rooms/${room.id}`} className="flex items-center justify-between rounded-lg border p-3 hover:bg-accent/50">
+							<Link key={room.id} to={`/room/${room.id}`} className="flex items-center justify-between rounded-lg border p-3 hover:bg-accent/50">
 								<div className="flex-1 flex-col gap-1">
 									<h3 className="font-medium">{room.name}</h3>
 

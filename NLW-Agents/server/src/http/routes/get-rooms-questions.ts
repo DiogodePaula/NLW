@@ -1,6 +1,6 @@
 import { desc, eq } from 'drizzle-orm';
 import type { FastifyPluginCallbackZod } from 'fastify-type-provider-zod';
-import z from 'zod/v4';
+import { z } from 'zod';
 import { db } from '../../db/connections.ts';
 import { schema } from '../../db/schema/index.ts';
 
@@ -15,7 +15,7 @@ export const getRoomsQuestionsRoute: FastifyPluginCallbackZod = async (app) => {
       },
     },
     async (request, reply) => {
-      const { roomId } = request.params;
+      const { roomId } = request.params as { roomId: string };
 
       // Primeiro verifica se a sala existe
       const roomExists = await db
