@@ -1,7 +1,7 @@
 # 🚀 NLW - Next Level Week
 
 <div align="center">
-  <img src="https://blog.rocketseat.com.br/content/images/size/w1000/2022/04/nlw-next-level-week-blog-rocketseat.png" alt="NLW Banner" width="700"/>
+  <img src="./assets/images/nlw.png" alt="NLW Banner" width="700"/>
 </div>
 
 <div align="center">
